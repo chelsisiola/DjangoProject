@@ -3,33 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Our Blog</title>
+    <title>Books Review - Home</title>
+    <style>
+        body {
+            background-color: #f4eee1; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f3ece7; 
+            color: #000;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #f3ece7; 
+            color: #000;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our Blog</h1>
+    <header>
+        <h1>LitLens</h1>
+    </header>
 
-    <h2>Categories</h2>
-    <ul>
-        {% for category in categories %}
-            <li>{{ category.category }}</li>
-        {% endfor %}
-    </ul>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+        </ul>
+    </nav>
 
-    <h2>Pages</h2>
-    <ul>
-        {% for page in pages %}
-            <li><a href="{% url 'page_detail' page.slug %}">{{ page.title }}</a></li>
-        {% endfor %}
-    </ul>
+    <main>
+        <h2>Categories</h2>
+        <ul>
+            <li>Fiction</li>
+            <li>Non-Fiction</li>
+    
+            
+        </ul>
 
-    <h2>Posts</h2>
-    <ul>
-        {% for post in posts %}
-            <li><a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a></li>
-            {% if post.image %}
-            <img src="{{ post.image.url }}" alt="{{ post.title }}">
-        {% endif %}
-        {% endfor %}
-    </ul>
+        <h2>Pages</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Tambahkan halaman lainnya sesuai kebutuhan -->
+        </ul>
+
+        <h2>Latest Posts</h2>
+        <ul>
+            <li><a href="#">Book Review 1</a></li>
+            <li><a href="#">Book Review 2</a></li>
+            <li><a href="#">Book Review 3</a></li>
+            <!-- Tambahkan posting terbaru lainnya sesuai kebutuhan -->
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Books Review</p>
+    </footer>
 </body>
 </html>
