@@ -1,1 +1,2 @@
-Chelsi-Web Djago
+Project Django
+
